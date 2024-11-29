@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct Custom_Cache_ImageApp: App {
+    let dependencies = [CacheService()]
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CustomCachingImageView(urlString: "https://picsum.photos/200", cacheService: dependencies[0]) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200)
+                    .clipped()
+            }
         }
     }
 }

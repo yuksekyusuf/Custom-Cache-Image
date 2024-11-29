@@ -7,18 +7,45 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CustomCachingImageView<Content: View>: View {
+    let urlString: String
+    let cacheService: CacheServicing
+    let content: (Image) -> Content
+
+    init(
+        urlString: String,
+        cacheService: CacheServicing,
+        @ViewBuilder content: @escaping (Image) -> Content
+    ) {
+        self.urlString = urlString
+        self.cacheService = cacheService
+        self.content = content
+    }
+
+    @State private var image: UIImage?
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            if let uiImage = image {
+                content(Image(uiImage: uiImage))
+            } else {
+                ProgressView()
+            }
         }
-        .padding()
+        .onAppear {
+            cacheService.getImage(key: urlString) { fetchedImage in
+                image = fetchedImage
+            }
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    CustomCachingImageView(urlString: "https://picsum.photos/200", cacheService: CacheService()) { image in
+        image
+            .resizable()
+            .scaledToFit()
+            .frame(width: 200)
+            .clipped()
+    }
 }

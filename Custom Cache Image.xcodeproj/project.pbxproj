@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		4D0C007B2CFA5E3F00156B74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D0C00312CFA5D2700156B74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D0C00382CFA5D2700156B74;
+			remoteInfo = "Custom Cache Image";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4D0C00392CFA5D2700156B74 /* Custom Cache Image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Cache Image.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0C00772CFA5E3F00156B74 /* CacheService_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheService_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = "Custom Cache Image";
 			sourceTree = "<group>";
 		};
+		4D0C00782CFA5E3F00156B74 /* CacheService_Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CacheService_Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4D0C00362CFA5D2700156B74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D0C00742CFA5E3F00156B74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0C003B2CFA5D2700156B74 /* Custom Cache Image */,
+				4D0C00782CFA5E3F00156B74 /* CacheService_Tests */,
 				4D0C003A2CFA5D2700156B74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0C00392CFA5D2700156B74 /* Custom Cache Image.app */,
+				4D0C00772CFA5E3F00156B74 /* CacheService_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 4D0C00392CFA5D2700156B74 /* Custom Cache Image.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4D0C00762CFA5E3F00156B74 /* CacheService_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D0C007D2CFA5E3F00156B74 /* Build configuration list for PBXNativeTarget "CacheService_Tests" */;
+			buildPhases = (
+				4D0C00732CFA5E3F00156B74 /* Sources */,
+				4D0C00742CFA5E3F00156B74 /* Frameworks */,
+				4D0C00752CFA5E3F00156B74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D0C007C2CFA5E3F00156B74 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4D0C00782CFA5E3F00156B74 /* CacheService_Tests */,
+			);
+			name = CacheService_Tests;
+			packageProductDependencies = (
+			);
+			productName = CacheService_Tests;
+			productReference = 4D0C00772CFA5E3F00156B74 /* CacheService_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					4D0C00382CFA5D2700156B74 = {
 						CreatedOnToolsVersion = 16.1;
+					};
+					4D0C00762CFA5E3F00156B74 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 4D0C00382CFA5D2700156B74;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				4D0C00382CFA5D2700156B74 /* Custom Cache Image */,
+				4D0C00762CFA5E3F00156B74 /* CacheService_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4D0C00372CFA5D2700156B74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D0C00752CFA5E3F00156B74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D0C00732CFA5E3F00156B74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D0C007C2CFA5E3F00156B74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D0C00382CFA5D2700156B74 /* Custom Cache Image */;
+			targetProxy = 4D0C007B2CFA5E3F00156B74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4D0C00452CFA5D2900156B74 /* Debug */ = {
@@ -302,6 +377,42 @@
 			};
 			name = Release;
 		};
+		4D0C007E2CFA5E3F00156B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62739J54F9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yuksekyusuf.CacheService-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Custom Cache Image.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Custom Cache Image";
+			};
+			name = Debug;
+		};
+		4D0C007F2CFA5E3F00156B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62739J54F9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yuksekyusuf.CacheService-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Custom Cache Image.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Custom Cache Image";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +430,15 @@
 			buildConfigurations = (
 				4D0C00482CFA5D2900156B74 /* Debug */,
 				4D0C00492CFA5D2900156B74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D0C007D2CFA5E3F00156B74 /* Build configuration list for PBXNativeTarget "CacheService_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D0C007E2CFA5E3F00156B74 /* Debug */,
+				4D0C007F2CFA5E3F00156B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
