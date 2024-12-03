@@ -70,4 +70,36 @@ final class CacheService_Tests: XCTestCase {
         
         waitForExpectations(timeout: 1, handler: nil)
     }
+    
+    // Test fetching an image that is not in the cache
+    func test_CacheService_ShouldGetImageFromNetwork() {
+        let testKey = "https://example.com/testImage.jpg"
+        
+        let expectation = self.expectation(description: "Fetch image from network")
+        
+        cacheService.getImage(key: testKey) { fetchedImage in
+            XCTAssertNil(fetchedImage, "Image should not be in the cache or fetched from the network in the mock.")
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    // Test saving and retrieving using the mock cache
+    func test_MockCacheService_ShouldSaveImage() {
+        let testKey = "mockKey"
+        let testImage = UIImage(systemName: "star")!
+        
+        mockCacheService.saveImage(key: testKey, image: testImage)
+        
+        let expectation = self.expectation(description: "Fetch image from mock cache")
+        
+        mockCacheService.getImage(key: testKey) { fetchedImage in
+            XCTAssertNotNil(fetchedImage, "Fetched image should not be nil.")
+            XCTAssertEqual(fetchedImage, testImage, "Fetched image should match the saved image in the mock cache.")
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
 }
